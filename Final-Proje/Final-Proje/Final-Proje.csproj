@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -44,6 +45,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UrunTakip">
+      <HintPath>..\..\..\..\OneDrive\Masaüstü\UrunTakip.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -70,11 +74,11 @@
     <Compile Include="Formlar\Filolar.Designer.cs">
       <DependentUpon>Filolar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\Muşteriler.cs">
+    <Compile Include="Formlar\Musteriler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\Muşteriler.Designer.cs">
-      <DependentUpon>Muşteriler.cs</DependentUpon>
+    <Compile Include="Formlar\Musteriler.Designer.cs">
+      <DependentUpon>Musteriler.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Sigortalar.cs">
       <SubType>Form</SubType>
@@ -82,13 +86,28 @@
     <Compile Include="Formlar\Sigortalar.Designer.cs">
       <DependentUpon>Sigortalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="islevFormları\MusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\MusteriEkle.Designer.cs">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Musteri.cs" />
+    <Compile Include="MusteriEkleSınıf.cs" />
+    <Compile Include="MysqlBaglantı.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formlar\Muşteriler.resx">
-      <DependentUpon>Muşteriler.cs</DependentUpon>
+    <EmbeddedResource Include="Formlar\Araclar.resx">
+      <DependentUpon>Araclar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Musteriler.resx">
+      <DependentUpon>Musteriler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\MusteriEkle.resx">
+      <DependentUpon>MusteriEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

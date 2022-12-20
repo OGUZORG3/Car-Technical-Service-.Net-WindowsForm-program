@@ -23,7 +23,8 @@ namespace Final_Proje
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            MysqlBaglantı baglantı = new MysqlBaglantı();
+            baglantı.BaglantıAc();
         }
         private void AktifButton(Object btnSender ,Color color)
         {
@@ -81,7 +82,7 @@ namespace Final_Proje
         private void button1_Click(object sender, EventArgs e)
         {
             AktifButton(button1, Color.FromArgb(0, 168, 204));
-            OpenChildForm(new Formlar.Muşteriler(), sender);
+            OpenChildForm(new Formlar.Musteriler(), sender);
         }
 
         private void button2_Click(object sender, EventArgs e)

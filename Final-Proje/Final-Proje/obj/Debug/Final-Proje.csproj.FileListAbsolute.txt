@@ -8,4 +8,9 @@ C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final-Proje.csproj
 C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final-Proje.csproj.CoreCompileInputs.cache
 C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final-Proje.exe
 C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final-Proje.pdb
-C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final_Proje.Formlar.Muşteriler.resources
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final_Proje.islevFormları.MusteriEkle.resources
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final_Proje.Formlar.Musteriler.resources
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\bin\Debug\MySql.Data.dll
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final-Proje.csproj.CopyComplete
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\bin\Debug\UrunTakip.dll
+C:\Users\oguzh\source\repos\Final-Proje\Final-Proje\obj\Debug\Final_Proje.Formlar.Araclar.resources
