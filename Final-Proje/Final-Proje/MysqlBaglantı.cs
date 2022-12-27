@@ -14,7 +14,7 @@ namespace Final_Proje
     {
         public MySqlConnection mysqlbaglan = new MySqlConnection("Server=localhost;Database=otoservis;Uid=root;Pwd='1234';");
         public MySqlDataReader oku;
-        public MySqlCommand komut;
+        public MySqlCommand komut = new MySqlCommand();
         public MySqlDataAdapter adapter;
         public DataTable dataset;
         public void BaglantıAc()
@@ -28,7 +28,7 @@ namespace Final_Proje
             }
             catch (Exception hata)
             {
-                System.Windows.Forms.MessageBox.Show("" + hata);
+                System.Windows.Forms.MessageBox.Show("Veri tabanı ile bağlantı sağlanamadı\n" + hata);
                 throw;
             }
         }

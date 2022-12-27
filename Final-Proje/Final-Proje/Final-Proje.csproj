@@ -36,6 +36,7 @@
     <Reference Include="MySql.Data, Version=6.6.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="islevFormları\FiloDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\FiloDuzenle.Designer.cs">
+      <DependentUpon>FiloDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islevFormları\SigortaDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\SigortaDuzenle.Designer.cs">
+      <DependentUpon>SigortaDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kurucuMetot\Arac.cs" />
+    <Compile Include="kurucuMetot\Filo.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,11 +77,11 @@
     <Compile Include="Formlar\Araclar.Designer.cs">
       <DependentUpon>Araclar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formlar\Ayarlar.cs">
+    <Compile Include="Formlar\Grafikler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formlar\Ayarlar.Designer.cs">
-      <DependentUpon>Ayarlar.cs</DependentUpon>
+    <Compile Include="Formlar\Grafikler.Designer.cs">
+      <DependentUpon>Grafikler.cs</DependentUpon>
     </Compile>
     <Compile Include="Formlar\Filolar.cs">
       <SubType>Form</SubType>
@@ -86,14 +101,51 @@
     <Compile Include="Formlar\Sigortalar.Designer.cs">
       <DependentUpon>Sigortalar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formlar\İslem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\İslem.Designer.cs">
+      <DependentUpon>İslem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islevFormları\AracDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\AracDuzenle.Designer.cs">
+      <DependentUpon>AracDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islevFormları\AracEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\AracEkle.Designer.cs">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islevFormları\FiloEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\FiloEkle.Designer.cs">
+      <DependentUpon>FiloEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="islevFormları\MusteriDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\MusteriDuzenle.Designer.cs">
+      <DependentUpon>MusteriDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="islevFormları\MusteriEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="islevFormları\MusteriEkle.Designer.cs">
       <DependentUpon>MusteriEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Musteri.cs" />
-    <Compile Include="MusteriEkleSınıf.cs" />
+    <Compile Include="islevFormları\SigortaEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="islevFormları\SigortaEkle.Designer.cs">
+      <DependentUpon>SigortaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kurucuMetot\Musteri.cs" />
+    <Compile Include="kurucuMetot\Sigorta.cs" />
+    <Compile Include="İslemler.cs" />
     <Compile Include="MysqlBaglantı.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,11 +155,44 @@
     <EmbeddedResource Include="Formlar\Araclar.resx">
       <DependentUpon>Araclar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Filolar.resx">
+      <DependentUpon>Filolar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Grafikler.resx">
+      <DependentUpon>Grafikler.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formlar\Musteriler.resx">
       <DependentUpon>Musteriler.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Sigortalar.resx">
+      <DependentUpon>Sigortalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\İslem.resx">
+      <DependentUpon>İslem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\AracDuzenle.resx">
+      <DependentUpon>AracDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\AracEkle.resx">
+      <DependentUpon>AracEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\FiloDuzenle.resx">
+      <DependentUpon>FiloDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\FiloEkle.resx">
+      <DependentUpon>FiloEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\MusteriDuzenle.resx">
+      <DependentUpon>MusteriDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="islevFormları\MusteriEkle.resx">
       <DependentUpon>MusteriEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\SigortaDuzenle.resx">
+      <DependentUpon>SigortaDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="islevFormları\SigortaEkle.resx">
+      <DependentUpon>SigortaEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

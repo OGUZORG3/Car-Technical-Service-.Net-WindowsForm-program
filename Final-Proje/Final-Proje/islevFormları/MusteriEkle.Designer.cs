@@ -80,6 +80,7 @@ namespace Final_Proje.islevFormları
             // 
             // cmbSigortaid
             // 
+            this.cmbSigortaid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSigortaid.FormattingEnabled = true;
             this.cmbSigortaid.Location = new System.Drawing.Point(522, 255);
             this.cmbSigortaid.Name = "cmbSigortaid";
@@ -88,6 +89,7 @@ namespace Final_Proje.islevFormları
             // 
             // cmbFiloid
             // 
+            this.cmbFiloid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFiloid.FormattingEnabled = true;
             this.cmbFiloid.Location = new System.Drawing.Point(522, 199);
             this.cmbFiloid.Name = "cmbFiloid";
@@ -96,6 +98,7 @@ namespace Final_Proje.islevFormları
             // 
             // cmbAracid
             // 
+            this.cmbAracid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAracid.FormattingEnabled = true;
             this.cmbAracid.Location = new System.Drawing.Point(522, 140);
             this.cmbAracid.Name = "cmbAracid";

@@ -105,25 +105,15 @@ namespace Final_Proje
         private void button5_Click(object sender, EventArgs e)
         {
             AktifButton(button5, Color.FromArgb(20, 40, 60));
-            OpenChildForm(new Formlar.Ayarlar(), sender);
+            OpenChildForm(new Formlar.Grafikler(), sender);
         }
-
-        private void button6_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            AktifButton(button5, Color.FromArgb(20, 40, 60));
+            OpenChildForm(new Formlar.İslem(), sender);
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                this.WindowState = FormWindowState.Maximized;
-            else
-                this.WindowState = FormWindowState.Normal;
-        }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

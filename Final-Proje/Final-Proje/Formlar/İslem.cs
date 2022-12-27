@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Final_Proje.Formlar
 {
-    public partial class Muşteriler : Form
+    public partial class İslem : Form
     {
-        public Muşteriler()
+        public İslem()
         {
             InitializeComponent();
         }

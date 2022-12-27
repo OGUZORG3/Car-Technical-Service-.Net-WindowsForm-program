@@ -14,24 +14,51 @@ namespace Final_Proje.islevFormları
 {
     public partial class MusteriEkle : Form
     {
-        Formlar.Musteriler anaEkran;
+        Formlar.Musteriler baglıEkran;
         MysqlBaglantı veri = new MysqlBaglantı();
-        
         public MusteriEkle(Formlar.Musteriler Parametre)
         {
             InitializeComponent();
-            anaEkran = Parametre;
+            baglıEkran = Parametre;
             veri.BaglantıAc();
+            
         }
          
         private void button1_Click(object sender, EventArgs e)
         {
-            MusteriEkleSınıf ekle = new MusteriEkleSınıf();
-            ekle.musteriEkle(txtAd.Text,txtSoyad.Text,txtTc.Text,TxtAdres.Text,txtTel.Text,Convert.ToInt32(cmbAracid.Text), Convert.ToInt32(cmbSigortaid.Text), Convert.ToInt32(cmbFiloid.Text));
-            
-            anaEkran.yenile();
-            this.Close();
-            
+            try
+            {
+                if ((txtTc.TextLength<12 && txtTc.TextLength>10))
+                {
+                    if ((txtTel.TextLength < 13 && txtTel.TextLength > 11))
+                    {
+                        if (txtAd.Text!=null&&txtSoyad.Text!=null&&TxtAdres.Text!=null)
+                        {
+                            İslemler islemyap = new İslemler();
+                            Musteri musteri = new Musteri(txtAd.Text, txtSoyad.Text, txtTel.Text, txtTc.Text, TxtAdres.Text, Convert.ToInt32(cmbAracid.Text), Convert.ToInt32(cmbSigortaid.Text), Convert.ToInt32(cmbFiloid.Text));
+                            islemyap.musteriEkle(musteri);
+                            baglıEkran.yenile();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("İsim , Soyisim ve Adres boş olamaz");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Telefon numarasının formatı yanlış");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Tc Kimlik numarasının formatı yanlış");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("derğerlerde boşluklar var");
+            }
         }
 
         private void MusteriEkle_Load(object sender, EventArgs e)
@@ -39,6 +66,7 @@ namespace Final_Proje.islevFormları
             arac();
             sigorta();
             Filo();
+            
         }
         private void arac()
         {
@@ -53,13 +81,13 @@ namespace Final_Proje.islevFormları
             }
             veri.oku.Close();
 
-            anaEkran.yenile();
+            baglıEkran.yenile();
         }
         private void Filo()
         {
             
             cmbFiloid.Items.Clear();
-            string sql = "SELECT arac_id FROM araclar";
+            string sql = "SELECT filo_id FROM filolar";
             veri.komut = new MySqlCommand(sql, veri.mysqlbaglan);
             veri.oku = veri.komut.ExecuteReader();
             while (veri.oku.Read())
@@ -68,13 +96,13 @@ namespace Final_Proje.islevFormları
             }
             veri.oku.Close();
 
-            anaEkran.yenile();
+            baglıEkran.yenile();
         }
         private void sigorta()
         {
           
             cmbSigortaid.Items.Clear();
-            string sql = "SELECT arac_id FROM araclar";
+            string sql = "SELECT sigorta_id FROM sigorta_sirketleri";
             veri.komut = new MySqlCommand(sql, veri.mysqlbaglan);
             veri.oku = veri.komut.ExecuteReader();
             while (veri.oku.Read())
@@ -83,7 +111,7 @@ namespace Final_Proje.islevFormları
             }
             veri.oku.Close();
 
-            anaEkran.yenile();
+            baglıEkran.yenile();
         }
     }
 }
